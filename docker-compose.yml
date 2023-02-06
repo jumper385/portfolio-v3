@@ -1,0 +1,19 @@
+version: "3.0.0"
+
+services:
+  db:
+    build: ./db
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    volumes:
+      - ./db/pb_data:/pb/pb_data
+  client:
+    build: ./client
+    ports:
+      - 2001:3000
+    expose:
+      - 2001
+    depends_on:
+      - db

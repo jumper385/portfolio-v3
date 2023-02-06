@@ -1,0 +1,5 @@
+pb_data
+.DS_Store*
+.env
+package-lock.json
+build
