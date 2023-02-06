@@ -26,7 +26,7 @@
 
         <Socials />
     </div>
-    <div style="height:100%">
-        <img src="landing.jpeg" alt="electronics pcb" />
+    <div>
+        <img src="landing.jpeg" alt="electronics pcb" style="height:100vh" />
     </div>
 </div>
