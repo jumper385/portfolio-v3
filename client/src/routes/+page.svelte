@@ -9,8 +9,6 @@
     <div
         style="display:flex; flex-direction:column; box-sizing:border-box; justify-content:space-between; height:100%; width:100%; padding:0;"
     >
-        <Nav />
-
         <div
             style="padding:32pt; display:flex; flex-direction:column; gap:12pt"
         >
@@ -25,8 +23,5 @@
         </div>
 
         <Socials />
-    </div>
-    <div>
-        <img src="landing.jpeg" alt="electronics pcb" style="height:100vh" />
     </div>
 </div>

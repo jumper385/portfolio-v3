@@ -1,4 +1,5 @@
 <script>
+    import Nav from "$lib/components/nav.svelte";
     import "../global.css";
 </script>
 
@@ -13,4 +14,5 @@
     />
 </svelte:head>
 
+<Nav />
 <slot />

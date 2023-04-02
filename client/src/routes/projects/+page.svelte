@@ -10,8 +10,6 @@
     const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 </script>
 
-<Nav />
-
 <div class="project-holder">
     {#each data?.projects as project}
         <ProjectCard
