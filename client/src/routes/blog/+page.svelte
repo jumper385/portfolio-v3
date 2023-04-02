@@ -10,7 +10,7 @@
 <div class="card-holder">
     {#each data.blogs as blog}
         <BlogCard
-            url="blog/{blog.id}"
+            url="/blog/{blog.id}"
             title={blog.title}
             author={blog.author}
             category={blog.category}
