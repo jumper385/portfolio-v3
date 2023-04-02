@@ -3,3 +3,5 @@ pb_data
 .env
 package-lock.json
 build
+pocketbase
+pb_migrations*/
