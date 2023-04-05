@@ -38,7 +38,7 @@
             padding: 0;
             margin: 6pt 0;
             font-weight: 400;
-            font-size: 24pt;
+            font-size: 18pt;
         }
         .author {
             font-size: 12pt;
