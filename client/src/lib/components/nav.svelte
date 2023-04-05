@@ -16,6 +16,7 @@
         .links {
             display: flex;
             box-sizing: border-box;
+            align-items: center;
             gap: 12pt;
             a {
                 text-decoration: none;
