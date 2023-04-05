@@ -13,7 +13,6 @@ export const actions = {
       email: res.get('email'),
       content: res.get('content')
     })
-    console.log(structuredClone(out));
-    throw redirect(303, '/contact/success/' + structuredClone(out))
+    throw redirect(303, '/contact/success/' + structuredClone(out).id)
   }
 }
