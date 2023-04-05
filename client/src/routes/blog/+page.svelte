@@ -14,7 +14,7 @@
             title={blog.title}
             author={blog.author}
             category={blog.category}
-            imgUrl={pb.getFileUrl(blog, blog.displayImg, { thumb: "300x300" })}
+            imgUrl={pb.getFileUrl(blog, blog.displayImg, { thumb: "0x300" })}
             likes={blog.likes}
             views={blog.views}
         />
