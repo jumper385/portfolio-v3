@@ -28,4 +28,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 6pt;
     }
+
+    @media only screen and (max-width: 600px) {
+        .card-holder {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24pt;
+        }
+    }
 </style>
