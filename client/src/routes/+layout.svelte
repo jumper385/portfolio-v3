@@ -1,5 +1,6 @@
 <script>
     import Nav from "$lib/components/nav.svelte";
+    import Socials from "$lib/components/socials.svelte";
     import "../global.css";
 </script>
 
@@ -16,3 +17,4 @@
 
 <Nav />
 <slot />
+<Socials />

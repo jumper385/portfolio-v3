@@ -22,8 +22,6 @@
     {/each}
 </div>
 
-<Socials />
-
 <style>
     .project-holder {
         display: grid;

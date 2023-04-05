@@ -1,8 +1,3 @@
-<script>
-    import Nav from "$lib/components/nav.svelte";
-    import Socials from "$lib/components/socials.svelte";
-</script>
-
 <div
     style="display:flex; width:100%; height:100vh ; padding:0; margin:0; justify-content:space-between; padding0"
 >
@@ -21,7 +16,5 @@
                 Analog Design, RTOS Firmware Design, NodeJS Development
             </p>
         </div>
-
-        <Socials />
     </div>
 </div>
