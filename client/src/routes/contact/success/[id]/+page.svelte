@@ -5,7 +5,11 @@
 <div class="wrapper">
     <h1>Success!!!</h1>
     <p>Hang Tight!!! 🛩️</p>
-    <p>Your Reference is {data.id}</p>
+    <p>
+        Your Reference is <span>
+            <pre>{data.id}</pre>
+        </span>
+    </p>
 </div>
 
 <style lang="scss">
@@ -18,5 +22,11 @@
             margin: 0;
             padding: 0;
         }
+    }
+    pre {
+        background: rgb(0, 255, 162);
+        width: fit-content;
+        display: inline;
+        border-radius: 3pt;
     }
 </style>
