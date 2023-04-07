@@ -13,6 +13,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+
+    <meta name="description" content="Electronics is kidna fun!" />
 </svelte:head>
 
 <Nav />

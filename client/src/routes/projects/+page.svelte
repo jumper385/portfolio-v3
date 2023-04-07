@@ -10,13 +10,15 @@
     const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 </script>
 
+<title>Projects 🏗️</title>
+
 <div class="project-holder">
     {#each data?.projects as project}
         <ProjectCard
             title={project.title}
             description={project.description}
             imgUrl={pb.getFileUrl(project, project.display[0], {
-                thumb: "1000x1000",
+                thumb: "1001x0",
             })}
         />
     {/each}

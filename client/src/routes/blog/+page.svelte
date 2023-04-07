@@ -7,6 +7,8 @@
     const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 </script>
 
+<title>Blog</title>
+
 <div class="card-holder">
     {#each data.blogs as blog}
         <BlogCard
@@ -14,7 +16,7 @@
             title={blog.title}
             author={blog.author}
             category={blog.category}
-            imgUrl={pb.getFileUrl(blog, blog.displayImg, { thumb: "0x500" })}
+            imgUrl={blog.displayImg}
             likes={blog.likes}
             views={blog.views}
         />

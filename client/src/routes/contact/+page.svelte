@@ -1,3 +1,5 @@
+<title>Contact 👋</title>
+
 <form action="?/contact" method="POST">
     <div class="row">
         <div class="entry">

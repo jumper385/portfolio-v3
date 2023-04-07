@@ -2,6 +2,8 @@
     export let data;
 </script>
 
+<title>Contact Success!!!</title>
+
 <div class="wrapper">
     <h1>Success!!!</h1>
     <p>Hang Tight!!! 🛩️</p>
