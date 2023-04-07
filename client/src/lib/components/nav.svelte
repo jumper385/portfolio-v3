@@ -31,4 +31,13 @@
             background-color: black;
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        .accent {
+            padding: 6pt 12pt !important;
+            margin: 0;
+            a {
+            }
+        }
+    }
 </style>
