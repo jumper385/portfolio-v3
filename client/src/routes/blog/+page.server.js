@@ -3,8 +3,8 @@ import Pocketbase from 'pocketbase';
 const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 
 export const load = async () => {
-  let {items: out} =
-      await pb.collection('blog').getList(1, 50, {filter: 'visible = true'});
+  let {items: out} = await pb.collection('blog').getList(
+      1, 50, {filter: 'visible = true', sort: 'created'});
   console.log(out?.map(e => e.id))
   let blogs;
   if (out.length > 0) {
