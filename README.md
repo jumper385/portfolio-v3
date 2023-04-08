@@ -14,6 +14,7 @@ To deploy, you'll need the following:
 `docker-compose up --build -d`
 4. Setup the pocketbase backend server at `http://YOUR_SERVER_SETUP:8543/_`
 5. In pocketbase, go into `settings > import collections` and copy and paste the [`db_structure.json`](https://github.com/jumper385/portfolio-v3/blob/main/db_structure.json) content into it.
+6. Your Portfolio Site is now READY! 🥳
 ## Features
 - Landing Page
 - Projects Page
