@@ -8,8 +8,5 @@ export const dateString = _d => {
   let d = date.getDate();
   let m = date.getMonth();
   let y = date.getFullYear();
-
-  console.log(m)
-
   return `${monthNames[m]} ${d}, ${y}`
 }
