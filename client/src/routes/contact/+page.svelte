@@ -85,4 +85,9 @@
             }
         }
     }
+    @media only screen and (max-width: 600px) {
+        .row {
+            gap: 6pt !important;
+        }
+    }
 </style>
