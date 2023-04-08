@@ -14,6 +14,5 @@ export const load = async () => {
                 views: e.views,
                 category: e.category,
               }))
-  console.log(blogs)
   return {blogs};
 }

@@ -1,23 +1,29 @@
 <script>
+    import { goto } from "$app/navigation";
+
     export let url, title, author, likes, views, imgUrl, category;
 </script>
 
 <div class="blogCard">
-    <a href={url} class="cardLink"
-        ><img class="responsiveImg" src={imgUrl} alt={title} /></a
-    >
-    <sub class="category">{category}</sub>
-    <a href={url} class="cardLink"><h3 class="cardTitle">{title}</h3></a>
-    <sub class="author">{author}</sub>
-    <div class="blog-performance">
-        <p class="likes">{likes} Likes</p>
-        <p class="views">{views} Views</p>
-    </div>
+    <a class="blog-link" href={url}>
+        <img class="responsiveImg" src={imgUrl} alt={title} />
+        <sub class="category">{category}</sub>
+        <a href={url} class="cardLink"><h3 class="cardTitle">{title}</h3></a>
+        <sub class="author">{author}</sub>
+        <div class="blog-performance">
+            <p class="likes">{likes} Likes</p>
+            <p class="views">{views} Views</p>
+        </div>
+    </a>
 </div>
 
 <style lang="scss">
     .blogCard {
         max-width: 100%;
+        .blog-link {
+            text-decoration: none !important;
+            color: black;
+        }
         .cardLink {
             text-decoration: none;
             text-color: none;
