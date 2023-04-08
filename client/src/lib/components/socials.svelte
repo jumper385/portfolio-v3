@@ -1,4 +1,4 @@
-<div style="padding:32pt;display:flex; gap:12pt">
+<div style="padding:0 32pt;display:flex; gap:12pt">
     <a
         style="font-size:18pt; padding:0;"
         href="https://www.behance.net/henrychen3de31"
