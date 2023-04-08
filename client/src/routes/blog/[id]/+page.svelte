@@ -1,4 +1,5 @@
 <script>
+    import { dateString } from "$lib/helpers/dateString.js";
     import Pocketbase from "pocketbase";
 
     export let data;
@@ -17,12 +18,37 @@
     <img alt={blog.summary} src={pb.getFileUrl(blog, blog.displayImg)} />
     <p class="title">{blog.title}</p>
 </div>
+
+<div class="blog-details">
+    <p>Written by <span class="author">{blog.author}</span></p>
+    <p class="date">{dateString(blog.created)}</p>
+</div>
+
+<hr />
+
 <div class="blog-content">{@html blog.content}</div>
 
 <style lang="scss">
     .blog-content {
         margin: 0 32pt;
     }
+    .blog-details {
+        font-size: 8pt;
+        display: flex;
+        justify-content: space-between;
+        padding: 0pt 32pt;
+        margin-bottom: 6pt;
+        .author {
+            font-weight: 600;
+        }
+    }
+
+    hr {
+        margin: 0 32pt;
+        height: 0;
+        border: 1px rgb(236, 236, 236) solid;
+    }
+
     .blog-landing {
         position: relative;
         margin-bottom: 42pt;
@@ -40,6 +66,17 @@
             left: 32pt;
             background: #ffff00;
             font-weight: bold;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .blog-landing {
+            position: static;
+            margin: 0;
+            .title {
+                font-size: 24pt;
+                position: static;
+                background: none;
+            }
         }
     }
 </style>

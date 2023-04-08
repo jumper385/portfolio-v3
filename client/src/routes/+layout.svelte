@@ -1,7 +1,7 @@
 <script>
     import Nav from "$lib/components/nav.svelte";
     import Socials from "$lib/components/socials.svelte";
-    import "../global.css";
+    import "../global.scss";
 </script>
 
 <svelte:head>

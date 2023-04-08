@@ -4,3 +4,10 @@
     font-family: 'Open Sans', sans-serif;
     line-height: 150%;
 }
+
+.blog-content {
+    img {
+        max-width: 100% !important;
+        height: auto;
+    }
+}
