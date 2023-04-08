@@ -17,7 +17,7 @@
 <div class="blog-landing">
     <img
         alt={blog.summary}
-        src={pb.getFileUrl(blog, blog.displayImg, { thumb: "1000x0" })}
+        src={pb.getFileUrl(blog, blog.displayImg, { thumb: "500x0" })}
     />
     <p class="title">{blog.title}</p>
 </div>
