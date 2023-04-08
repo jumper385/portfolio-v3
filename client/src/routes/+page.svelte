@@ -1,13 +1,14 @@
 <title>Digism Design Co.</title>
 
 <div
-    style="display:flex; width:100%; padding:0; margin:0; justify-content:space-between; padding0"
+    style="display:flex; width:100%; padding:0; margin:0; justify-content:space-between; padding:0"
 >
     <div
-        style="display:flex; flex-direction:column; box-sizing:border-box; justify-content:space-between; height:100%; width:100%; padding:0;"
+        style="display:flex; flex-direction:column; box-sizing:border-box; justify-content:space-between; height:100%; width:100%; padding:0; position: relative"
     >
+        <img src="landing.webp" alt="3 pcb's in seamless backgorund" />
         <div
-            style="padding:32pt; display:flex; flex-direction:column; gap:12pt"
+            style="padding:32pt; display:flex; flex-direction:column; gap:12pt; margin-bottom:0"
         >
             <h1 style="padding:0; margin:0;">Henry Chen</h1>
             <h2 style="padding:0; margin:0;">Electronics, Web, IoT</h2>
