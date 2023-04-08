@@ -11,7 +11,8 @@ export const load = async () => {
                 title: e.title,
                 displayImg: pb.getFileUrl(e, e.displayImg, {thumb: '0x1000'}),
                 likes: e.likes,
-                views: e.views
+                views: e.views,
+                category: e.category,
               }))
   console.log(blogs)
   return {blogs};
