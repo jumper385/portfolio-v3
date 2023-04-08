@@ -6,14 +6,14 @@ services:
     expose:
       - 8080
     ports:
-      - 8080:8080
+      - 8543:8080
     volumes:
       - ./db/pb_data:/pb/pb_data
   client:
     build: ./client
     ports:
-      - 2001:3000
+      - 80:3000
     expose:
-      - 2001
+      - 80
     depends_on:
       - db
