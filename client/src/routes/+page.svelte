@@ -1,12 +1,9 @@
 <title>Digism Design Co.</title>
 
-<div
-    style="display:flex; width:100%; padding:0; margin:0; justify-content:space-between; padding:0"
->
+<div style="display:flex; padding:0; margin:0; justify-content:space-between;">
     <div
-        style="display:flex; flex-direction:column; box-sizing:border-box; justify-content:space-between; height:100%; width:100%; padding:0; position: relative"
+        style="display:flex; flex-direction:column; box-sizing:border-box; justify-content:space-between; width:100%; padding:0; position: relative"
     >
-        <img src="landing.webp" alt="3 pcb's in seamless backgorund" />
         <div
             style="padding:32pt; display:flex; flex-direction:column; gap:12pt; margin-bottom:0"
         >
