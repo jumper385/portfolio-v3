@@ -2,10 +2,12 @@
 
 * {
     font-family: 'Open Sans', sans-serif;
-    line-height: 150%;
+    line-height: 200%;
 }
 
 .blog-content {
+    line-height: 150% !important;
+
     img {
         max-width: 100% !important;
         height: auto;
