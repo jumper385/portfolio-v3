@@ -10,17 +10,21 @@
 <title>Blog</title>
 
 <div class="card-holder">
-    {#each data.blogs as blog}
-        <BlogCard
-            url="/blog/{blog.id}"
-            title={blog.title}
-            author={blog.author}
-            category={blog.category}
-            imgUrl={blog.displayImg}
-            likes={blog.likes}
-            views={blog.views}
-        />
-    {/each}
+    {#if data.blogs.length > 0}
+        {#each data.blogs as blog}
+            <BlogCard
+                url="/blog/{blog.id}"
+                title={blog.title}
+                author={blog.author}
+                category={blog.category}
+                imgUrl={blog.displayImg}
+                likes={blog.likes}
+                views={blog.views}
+            />
+        {/each}
+    {:else}
+        <p style="color:lightgrey">No Blog Entries to Display...</p>
+    {/if}
 </div>
 
 <style>
