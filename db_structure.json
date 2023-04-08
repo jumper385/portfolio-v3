@@ -1,0 +1,309 @@
+[
+    {
+        "id": "_pb_users_auth_",
+        "name": "users",
+        "type": "auth",
+        "system": false,
+        "schema": [
+            {
+                "id": "users_name",
+                "name": "name",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "users_avatar",
+                "name": "avatar",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "image/jpeg",
+                        "image/png",
+                        "image/svg+xml",
+                        "image/gif",
+                        "image/webp"
+                    ],
+                    "thumbs": null
+                }
+            }
+        ],
+        "listRule": "id = @request.auth.id",
+        "viewRule": "id = @request.auth.id",
+        "createRule": "",
+        "updateRule": "id = @request.auth.id",
+        "deleteRule": "id = @request.auth.id",
+        "options": {
+            "allowEmailAuth": true,
+            "allowOAuth2Auth": true,
+            "allowUsernameAuth": true,
+            "exceptEmailDomains": null,
+            "manageRule": null,
+            "minPasswordLength": 8,
+            "onlyEmailDomains": null,
+            "requireEmail": false
+        }
+    },
+    {
+        "id": "y8wanhjjeq4mi6j",
+        "name": "projects",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "dtylybls",
+                "name": "title",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "ktyi5oit",
+                "name": "description",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "ruexppsw",
+                "name": "display",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 100,
+                    "maxSize": 10000000,
+                    "mimeTypes": [
+                        "image/jpeg",
+                        "image/png",
+                        "image/tiff"
+                    ],
+                    "thumbs": [
+                        "100x100",
+                        "200x200",
+                        "300x300",
+                        "1000x1000"
+                    ]
+                }
+            }
+        ],
+        "listRule": "",
+        "viewRule": "",
+        "createRule": null,
+        "updateRule": null,
+        "deleteRule": null,
+        "options": {}
+    },
+    {
+        "id": "9x3e96xno1fiwoz",
+        "name": "blog",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "rzeyncta",
+                "name": "title",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "jat1pgb9",
+                "name": "summary",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "arfcuaty",
+                "name": "author",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "bt1mmfzs",
+                "name": "displayImg",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 1000000000,
+                    "mimeTypes": [],
+                    "thumbs": [
+                        "0x300",
+                        "0x500",
+                        "0x1000"
+                    ]
+                }
+            },
+            {
+                "id": "y3p4hnfq",
+                "name": "content",
+                "type": "editor",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {}
+            },
+            {
+                "id": "xsjgaa9e",
+                "name": "category",
+                "type": "select",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "values": [
+                        "Firmware",
+                        "Hardware",
+                        "Web Development",
+                        "Photography",
+                        "Life n Stuff",
+                        "Misc"
+                    ]
+                }
+            },
+            {
+                "id": "xygdve4o",
+                "name": "likes",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null
+                }
+            },
+            {
+                "id": "z1mifqmh",
+                "name": "views",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null
+                }
+            }
+        ],
+        "listRule": "",
+        "viewRule": "",
+        "createRule": null,
+        "updateRule": "",
+        "deleteRule": null,
+        "options": {}
+    },
+    {
+        "id": "tr5nqmjuntumood",
+        "name": "contact",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "uutdawpu",
+                "name": "first_name",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "fyjwtois",
+                "name": "last_name",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "cslho1qb",
+                "name": "email",
+                "type": "email",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "exceptDomains": null,
+                    "onlyDomains": null
+                }
+            },
+            {
+                "id": "tlhyo4yk",
+                "name": "content",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            }
+        ],
+        "listRule": null,
+        "viewRule": null,
+        "createRule": "",
+        "updateRule": null,
+        "deleteRule": null,
+        "options": {}
+    }
+]
