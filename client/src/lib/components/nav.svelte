@@ -4,7 +4,9 @@
         <a href="/projects">projects</a>
         <a href="/blog">blog</a>
     </div>
-    <div class="links"><a class="accent" href="/contact">contact</a></div>
+    <div class="links">
+        <a class="accent" href="/contact">contact</a>
+    </div>
 </nav>
 
 <style lang="scss">
@@ -22,11 +24,15 @@
                 text-decoration: none;
                 font-weight: 500;
                 color: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 6pt;
             }
         }
         .accent {
             color: white !important;
-            padding: 12pt 32pt;
+            padding: 6pt 12pt;
             border-radius: 3pt;
             background-color: black;
         }
@@ -36,8 +42,6 @@
         .accent {
             padding: 6pt 12pt !important;
             margin: 0;
-            a {
-            }
         }
     }
 </style>

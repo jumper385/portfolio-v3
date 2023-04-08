@@ -20,6 +20,7 @@
                 imgUrl={blog.displayImg}
                 likes={blog.likes}
                 views={blog.views}
+                createdAt={blog.created}
             />
         {/each}
     {:else}
@@ -32,7 +33,7 @@
         margin: 32pt;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 6pt;
+        grid-column-gap: 36pt;
     }
 
     @media only screen and (max-width: 600px) {

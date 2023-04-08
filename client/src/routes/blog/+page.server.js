@@ -17,6 +17,7 @@ export const load = async () => {
           likes: e.likes,
           views: e.views,
           category: e.category,
+          created: e.created
         }))
   } else {
     blogs = []
