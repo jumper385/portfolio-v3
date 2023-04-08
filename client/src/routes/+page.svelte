@@ -1,7 +1,7 @@
 <title>Digism Design Co.</title>
 
 <div
-    style="display:flex; width:100%; height:100vh ; padding:0; margin:0; justify-content:space-between; padding0"
+    style="display:flex; width:100%; padding:0; margin:0; justify-content:space-between; padding0"
 >
     <div
         style="display:flex; flex-direction:column; box-sizing:border-box; justify-content:space-between; height:100%; width:100%; padding:0;"
