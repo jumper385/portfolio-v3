@@ -8,6 +8,9 @@ export const actions = {
     let res = await request.formData()
     let email = res.get('email')
     let password = res.get('password')
+
+    console.log(email, password)
+
     let authData = await pb.admins.authWithPassword(email, password)
     let {record, token} = authData
 
