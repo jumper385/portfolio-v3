@@ -1,3 +1,7 @@
+<script>
+    export let admin;
+</script>
+
 <nav>
     <div class="links">
         <a href="/">home</a>
@@ -5,7 +9,11 @@
         <a href="/blog">blog</a>
     </div>
     <div class="links">
-        <a class="accent" href="/contact">contact</a>
+        {#if !admin}
+            <a class="accent" href="/contact">contact</a>
+        {:else}
+            <a class="accent" href="/dashboard">dashboard</a>
+        {/if}
     </div>
 </nav>
 

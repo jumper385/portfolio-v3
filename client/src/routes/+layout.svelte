@@ -2,6 +2,8 @@
     import Nav from "$lib/components/nav.svelte";
     import Socials from "$lib/components/socials.svelte";
     import "../global.scss";
+
+    export let data;
 </script>
 
 <svelte:head>
@@ -17,6 +19,6 @@
     <meta name="description" content="Electronics is kidna fun!" />
 </svelte:head>
 
-<Nav />
+<Nav admin={data?.admin} />
 <slot />
 <Socials />
