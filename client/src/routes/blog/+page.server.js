@@ -6,7 +6,9 @@ export const load = async () => {
   let {items: out} = await pb.collection('blog').getList(
       1, 50, {filter: 'visible = true', sort: '-created'});
   console.log(out?.map(e => e.id))
+
   let blogs;
+
   if (out.length > 0) {
     blogs = out?.map(
         e => ({
