@@ -5,12 +5,8 @@ server {
     server_name digism.xyz www.digism.xyz;
     server_tokens off;
 
-    location /.well-known/acme-challenge/ {
-        root /var/www/certbot;
-    }
-
     location / {
-        return 301 https://digism.xyz$request_uri;
+        return 301 https://$host$request_uri;
     }
 }
 
@@ -22,6 +18,12 @@ server {
 
     ssl_certificate /etc/nginx/ssl/live/digism.xyz/fullchain.pem;
     ssl_certificate_key /etc/nginx/ssl/live/digism.xyz/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
 
     location / {
         proxy_pass: http://digism.xyz;
