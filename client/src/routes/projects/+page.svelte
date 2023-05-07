@@ -18,7 +18,7 @@
                 imgUrl={pb.getFileUrl(project, project.display[0], {
                     thumb: "0x1000",
                 })}
-                subtitle={project.subtitle}
+                subtitle={project.description}
                 timestamp={project.created}
                 metrics={[
                     {

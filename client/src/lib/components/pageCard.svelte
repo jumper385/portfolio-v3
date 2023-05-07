@@ -30,13 +30,26 @@
 <div class="card">
     <a class="card-link" href={url}>
         <img class="responsiveImg" src={imgUrl} alt={title} />
-        <sub class="tag">{tag}</sub>
+        {#if tag}
+            <sub class="tag">{tag}</sub>
+        {/if}
         <h3 class="cardTitle">{title}</h3>
         <div class="card-details">
-            <p>{subtitle}</p>
+            {#if subtitle}
+                <p>{subtitle}</p>
+            {/if}
             <p class="date">{dateString(timestamp)}</p>
         </div>
         <hr />
+        {#if price_code}
+            <div>
+                <button
+                    class="donate-button"
+                    type="submit"
+                    value={{ price_code }}>Donate</button
+                >
+            </div>
+        {/if}
         <div class="card-metrics">
             {#if metrics?.length > 0}
                 {#each metrics as { icon, metric }}
@@ -50,11 +63,6 @@
             {/if}
         </div>
     </a>
-    <div>
-        <form on:submit={createCheckout}>
-            <button type="submit" value={{ price_code }}>Buy Now</button>
-        </form>
-    </div>
 </div>
 
 <style lang="scss">
@@ -85,10 +93,14 @@
         .card-details {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             font-size: 8pt !important;
             margin: 0;
             padding: 0;
+            gap: 12pt;
+            .date {
+                flex-shrink: 0;
+            }
             * {
                 padding: 0;
                 margin: 6pt 0;
