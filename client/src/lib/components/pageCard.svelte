@@ -45,8 +45,7 @@
             <div>
                 <button
                     class="donate-button"
-                    type="submit"
-                    value={{ price_code }}>Donate</button
+                    on:click|preventDefault={createCheckout}>Donate</button
                 >
             </div>
         {/if}
