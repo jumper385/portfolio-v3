@@ -80,9 +80,6 @@ export const POST = async ({request}) => {
 
     const event = await stripe.webhooks.constructEventAsync(data, sig, whsec);
 
-    console.log(data)
-    console.log(sig)
-
     if (VITE_STRIPE_WEBHOOK_SECRET_KEY &&
         event.type === 'checkout.session.completed') {
       const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
