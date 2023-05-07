@@ -7,7 +7,7 @@ server {
     }
 
     location /.well-known/acme-challenge/ {
-        root /var/www/certbot;
+        root /var/certbot/www;
     }
 
 }
