@@ -1,23 +1,38 @@
 version: "3.3"
 
 services:
-  db:
-    build:
-      context: ./db
-      args:
-        - PB_VERSION=0.14.1
-    expose:
-      - 8080
-    ports:
-      - 8543:8080
-    volumes:
-      - ./db/pb_data:/pb/pb_data
 
-  client:
-    build: ./client
+  nginx:
+    image: nginx:latest
     ports:
-      - 80:3000
-    expose:
-      - 80
-    depends_on:
-      - db
+      - 80:80
+      - 443:443
+    restart: always
+    volumes:
+      - ./nginx/conf/:/etc/nginx/conf.d/:ro
+      - ./certbot/www:/var/www/certbot/:ro
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+  # db:
+  #   build:
+  #     context: ./db
+  #     args:
+  #       - PB_VERSION=0.14.1
+  #   expose:
+  #     - 8080
+  #   ports:
+  #     - 8543:8080
+  #   volumes:
+  #     - ./db/pb_data:/pb/pb_data
+
+  # client:
+  #   build: ./client
+  #   ports:
+  #     - 80:3000
+  #   expose:
+  #     - 80
+  #   depends_on:
+  #     - db

@@ -3,9 +3,6 @@
 
     import Pocketbase from "pocketbase";
 
-    import Nav from "$lib/components/nav.svelte";
-    import ProjectCard from "$lib/components/projectCard.svelte";
-    import Socials from "../../lib/components/socials.svelte";
     import PageCard from "$lib/components/pageCard.svelte";
 
     const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
