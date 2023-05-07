@@ -20,6 +20,18 @@ hr {
     padding: 0;
 }
 
+button,
+.btn {
+    color: white;
+    padding: 14pt 16pt;
+    border-radius: 3pt;
+    background-color: black;
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    border: none;
+}
+
 form {
     padding: 0 32pt;
 
