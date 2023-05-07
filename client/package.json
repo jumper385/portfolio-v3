@@ -23,6 +23,7 @@
 	"type": "module",
 	"dependencies": {
 		"@tinymce/tinymce-svelte": "^1.0.1",
-		"pocketbase": "^0.10.1"
+		"pocketbase": "^0.10.1",
+		"stripe": "^12.4.0"
 	}
 }

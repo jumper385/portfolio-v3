@@ -6,6 +6,7 @@
     import Nav from "$lib/components/nav.svelte";
     import ProjectCard from "$lib/components/projectCard.svelte";
     import Socials from "../../lib/components/socials.svelte";
+    import PageCard from "$lib/components/pageCard.svelte";
 
     const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 </script>
@@ -13,15 +14,28 @@
 <title>Projects 🏗️</title>
 
 <div class="project-holder">
-    {#each data?.projects as project}
-        <ProjectCard
-            title={project.title}
-            description={project.description}
-            imgUrl={pb.getFileUrl(project, project.display[0], {
-                thumb: "1001x0",
-            })}
-        />
-    {/each}
+    {#if data?.projects && data?.projects?.length > 0}
+        {#each data?.projects as project}
+            <PageCard
+                title={project.title}
+                imgUrl={pb.getFileUrl(project, project.display[0], {
+                    thumb: "0x1000",
+                })}
+                subtitle={project.subtitle}
+                timestamp={project.created}
+                metrics={[
+                    {
+                        icon: "ri-hand-heart-fill",
+                        metric: `$${project.funding / 100}`,
+                    },
+                ]}
+                tag={project.tag}
+                price_code={project.price_code}
+            />
+        {/each}
+    {:else}
+        <p style="color:lightgrey">No Projects to Display...</p>
+    {/if}
 </div>
 
 <style>

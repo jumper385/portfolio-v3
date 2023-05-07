@@ -16,6 +16,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
 
+    <script src="https://js.stripe.com/v3/"></script>
+
     <meta name="description" content="Electronics is kidna fun!" />
 </svelte:head>
 

@@ -12,6 +12,7 @@ services:
       - 8543:8080
     volumes:
       - ./db/pb_data:/pb/pb_data
+
   client:
     build: ./client
     ports:

@@ -11,7 +11,18 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "u1ukvsye",
+                "name": "city",
+                "type": "text",
+                "system": false,
+                "required": false,
                 "options": {
                     "min": null,
                     "max": null,
@@ -24,7 +35,6 @@
                 "type": "file",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "maxSelect": 1,
                     "maxSize": 5242880,
@@ -37,8 +47,21 @@
                     ],
                     "thumbs": null
                 }
+            },
+            {
+                "id": "nwkell7j",
+                "name": "summary",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
             }
         ],
+        "indexes": [],
         "listRule": "id = @request.auth.id",
         "viewRule": "id = @request.auth.id",
         "createRule": "",
@@ -56,69 +79,6 @@
         }
     },
     {
-        "id": "y8wanhjjeq4mi6j",
-        "name": "projects",
-        "type": "base",
-        "system": false,
-        "schema": [
-            {
-                "id": "dtylybls",
-                "name": "title",
-                "type": "text",
-                "system": false,
-                "required": false,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "id": "ktyi5oit",
-                "name": "description",
-                "type": "text",
-                "system": false,
-                "required": false,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "id": "ruexppsw",
-                "name": "display",
-                "type": "file",
-                "system": false,
-                "required": false,
-                "unique": false,
-                "options": {
-                    "maxSelect": 100,
-                    "maxSize": 10000000,
-                    "mimeTypes": [
-                        "image/jpeg",
-                        "image/png",
-                        "image/tiff"
-                    ],
-                    "thumbs": [
-                        "100x100",
-                        "200x200",
-                        "300x300",
-                        "1000x1000"
-                    ]
-                }
-            }
-        ],
-        "listRule": "",
-        "viewRule": "",
-        "createRule": null,
-        "updateRule": null,
-        "deleteRule": null,
-        "options": {}
-    },
-    {
         "id": "9x3e96xno1fiwoz",
         "name": "blog",
         "type": "base",
@@ -130,7 +90,6 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null,
@@ -143,7 +102,6 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null,
@@ -156,7 +114,6 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null,
@@ -169,7 +126,6 @@
                 "type": "file",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "maxSelect": 1,
                     "maxSize": 1000000000,
@@ -187,7 +143,6 @@
                 "type": "editor",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {}
             },
             {
@@ -196,7 +151,6 @@
                 "type": "select",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "maxSelect": 1,
                     "values": [
@@ -215,7 +169,6 @@
                 "type": "number",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null
@@ -227,13 +180,21 @@
                 "type": "number",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null
                 }
+            },
+            {
+                "id": "zsbjjtbb",
+                "name": "visible",
+                "type": "bool",
+                "system": false,
+                "required": false,
+                "options": {}
             }
         ],
+        "indexes": [],
         "listRule": "",
         "viewRule": "",
         "createRule": null,
@@ -253,7 +214,6 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null,
@@ -266,7 +226,6 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null,
@@ -279,7 +238,6 @@
                 "type": "email",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "exceptDomains": null,
                     "onlyDomains": null
@@ -291,18 +249,176 @@
                 "type": "text",
                 "system": false,
                 "required": false,
-                "unique": false,
                 "options": {
                     "min": null,
                     "max": null,
                     "pattern": ""
                 }
+            },
+            {
+                "id": "wxhuxdof",
+                "name": "opened",
+                "type": "bool",
+                "system": false,
+                "required": false,
+                "options": {}
             }
         ],
+        "indexes": [],
         "listRule": null,
         "viewRule": null,
         "createRule": "",
         "updateRule": null,
+        "deleteRule": null,
+        "options": {}
+    },
+    {
+        "id": "2f0wmvgpnxevpx6",
+        "name": "transactions",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "9u8wefun",
+                "name": "project_id",
+                "type": "relation",
+                "system": false,
+                "required": false,
+                "options": {
+                    "collectionId": "y8wanhjjeq4mi6j",
+                    "cascadeDelete": false,
+                    "minSelect": null,
+                    "maxSelect": 1,
+                    "displayFields": [
+                        "title"
+                    ]
+                }
+            },
+            {
+                "id": "gjo7b6iz",
+                "name": "product_id",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "oiokaaaj",
+                "name": "transaction_id",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "kh0zm1xd",
+                "name": "amount",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null
+                }
+            }
+        ],
+        "indexes": [],
+        "listRule": null,
+        "viewRule": null,
+        "createRule": "",
+        "updateRule": null,
+        "deleteRule": null,
+        "options": {}
+    },
+    {
+        "id": "y8wanhjjeq4mi6j",
+        "name": "projects",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "dtylybls",
+                "name": "title",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "ktyi5oit",
+                "name": "description",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "ruexppsw",
+                "name": "display",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "options": {
+                    "maxSelect": 100,
+                    "maxSize": 10000000,
+                    "mimeTypes": [
+                        "image/jpeg",
+                        "image/png",
+                        "image/tiff"
+                    ],
+                    "thumbs": [
+                        "100x100",
+                        "200x200",
+                        "300x300",
+                        "1000x1000"
+                    ]
+                }
+            },
+            {
+                "id": "nkshyw9v",
+                "name": "price_code",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "grvpbobe",
+                "name": "funding",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "options": {
+                    "min": null,
+                    "max": null
+                }
+            }
+        ],
+        "indexes": [],
+        "listRule": "",
+        "viewRule": "",
+        "createRule": null,
+        "updateRule": "",
         "deleteRule": null,
         "options": {}
     }

@@ -5,12 +5,13 @@
     export let data;
 
     const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
+    console.log(data?.blogs);
 </script>
 
 <title>Blog</title>
 
 <div class="card-holder">
-    {#if data.blogs.length > 0}
+    {#if data?.blogs.length > 0}
         {#each data.blogs as blog}
             <BlogCard
                 url="/blog/{blog.id}"

@@ -1,0 +1,6 @@
+pb_data
+.DS_Store*
+package-lock.json
+build
+pocketbase
+pb_migrations*/
