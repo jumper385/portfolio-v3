@@ -15,9 +15,11 @@
         {#each data?.projects as project}
             <PageCard
                 title={project.title}
-                imgUrl={pb.getFileUrl(project, project.display[0], {
-                    thumb: "0x1000",
-                })}
+                imgUrl={pb
+                    .getFileUrl(project, project.display[0], {
+                        thumb: "0x1000",
+                    })
+                    .replace("https", "http")}
                 subtitle={project.subtitle}
                 timestamp={project.created}
                 metrics={[
