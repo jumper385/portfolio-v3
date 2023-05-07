@@ -21,7 +21,7 @@ export const actions = {
 
     try {
       session = await stripe.checkout.sessions.create({
-        success_url: 'http://10.1.1.27:5173/projects',
+        success_url: 'http://digism.xyz/projects',
         line_items: [{quantity: 1, price: price_code}],
         mode: 'payment',
         automatic_tax: {enabled: true}
