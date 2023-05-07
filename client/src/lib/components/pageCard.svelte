@@ -43,10 +43,13 @@
         <hr />
         {#if price_code}
             <div>
-                <button
-                    class="donate-button"
-                    on:click|preventDefault={createCheckout}>Donate</button
-                >
+                <form on:submit|preventDefault={createCheckout}>
+                    <button
+                        class="donate-button"
+                        type="submit"
+                        on:click|preventDefault={createCheckout}>Donate</button
+                    >
+                </form>
             </div>
         {/if}
         <div class="card-metrics">
@@ -66,6 +69,14 @@
 
 <style lang="scss">
     .card {
+        form {
+            margin: 0;
+            padding: 0;
+            margin-top: 12pt;
+            button:hover {
+                cursor: pointer;
+            }
+        }
         .card-link {
             text-decoration: none !important;
             color: black;
