@@ -1,27 +1,29 @@
 server {
     listen 80;
-    server_name digism.xyz;
+    listen [::]:80;
 
-    location / {
-        return 301 https://$host$request_uri;
-    }
+    server_name digism.xyz www.digism.xyz;
+    server_tokens off;
 
     location /.well-known/acme-challenge/ {
-        root /var/certbot/www;
+        root /var/www/certbot;
     }
 
+    location / {
+        return 301 https://digism.xyz$request_uri;
+    }
 }
+
 server {
-    listen 443 ssl;
+    listen 443 default_server ssl http2;
+    listen [::]:443 ssl http2;
+
     server_name digism.xyz;
 
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
-    ssl_certificate /etc/letsencrypt/live/digism.xyz/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/digism.xyz/privkey.pem;
+    ssl_certificate /etc/nginx/ssl/live/digism.xyz/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/live/digism.xyz/privkey.pem;
 
     location / {
-        proxy_pass http://digism.xyz; #for demo purposes
+        proxy_pass: http://digism.xyz;
     }
 }
