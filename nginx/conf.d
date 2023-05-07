@@ -1,15 +1,21 @@
 server {
     listen 80;
-    listen [::]:80;
+    server_name digism.xyz;
 
-    server_name digism.xyz www.digism.xyz;
-    server_tokens off;
+    location / {
+        return 301 https://$host$request_uri;
+    }
 
     location /.well-known/acme-challenge/ {
         root /var/www/certbot;
     }
 
+}
+server {
+    listen 443 ssl;
+    server_name digism.xyz;
+
     location / {
-        return 301 https://example.org$request_uri;
+        proxy_pass http://digism.xyz; #for demo purposes
     }
 }
