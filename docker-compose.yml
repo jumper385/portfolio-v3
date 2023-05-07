@@ -20,23 +20,19 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-  # db:
-  #   build:
-  #     context: ./db
-  #     args:
-  #       - PB_VERSION=0.14.1
-  #   expose:
-  #     - 8080
-  #   ports:
-  #     - 8543:8080
-  #   volumes:
-  #     - ./db/pb_data:/pb/pb_data
+  db:
+    build:
+      context: ./db
+      args:
+        - PB_VERSION=0.14.1
+    expose:
+      - 8080
+    ports:
+      - 8543:8080
+    volumes:
+      - ./db/pb_data:/pb/pb_data
 
-  # client:
-  #   build: ./client
-  #   ports:
-  #     - 80:3000
-  #   expose:
-  #     - 80
-  #   depends_on:
-  #     - db
+  client:
+    build: ./client
+    depends_on:
+      - db
