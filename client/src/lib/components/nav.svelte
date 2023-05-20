@@ -4,15 +4,23 @@
 
 <nav>
     <div class="links">
-        <a href="/">home</a>
-        <a href="/projects">projects</a>
-        <a href="/blog">blog</a>
+        {#if admin}
+            <a href="/admin/dashboard">dashboard</a>
+            <a href="/admin/projects">projects</a>
+            <a href="/admin/blog">blog</a>
+            <a href="/admin/messages">messages</a>
+            <a href="/admin/messages">settings</a>
+        {:else}
+            <a href="/">home</a>
+            <a href="/projects">projects</a>
+            <a href="/blog">blog</a>
+        {/if}
     </div>
     <div class="links">
-        {#if !admin}
-            <a class="accent" href="/contact">contact</a>
+        {#if admin}
+            <p class="accent">signout</p>
         {:else}
-            <a class="accent" href="/dashboard">dashboard</a>
+            <a href="/contact" class="accent">contact</a>
         {/if}
     </div>
 </nav>
@@ -39,6 +47,13 @@
             }
         }
         .accent {
+            text-decoration: none !important;
+            font-weight: 500 !important;
+            color: black !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between;
+            gap: 6pt;
             color: white !important;
             padding: 6pt 12pt;
             border-radius: 3pt;
