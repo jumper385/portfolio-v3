@@ -1,10 +1,12 @@
-import Pocketbase, {Record} from 'pocketbase';
+import {redirect} from '@sveltejs/kit';
+import Pocketbase from 'pocketbase'
 
 const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 
 export const load = async ({cookies}) => {
   pb.authStore.loadFromCookie(cookies.get('sessionid'));
-  if (pb.authStore.isValid) {
-    return ({admin: true})
+  let profile = structuredClone(pb.authStore.model);
+  return {
+    profile
   }
 }
