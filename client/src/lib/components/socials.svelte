@@ -8,6 +8,10 @@
     <a class="socials-link" href="https://www.instagram.com/chenryhen384/"
         ><i class="ri-instagram-line" />
     </a>
+
+    <a class="socials-link" href="https://github.com/jumper385"
+        ><i class="ri-github-line" />
+    </a>
 </div>
 
 <style lang="scss">
