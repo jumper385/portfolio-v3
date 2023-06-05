@@ -1,46 +1,10 @@
 <script>
-    import BlogCard from "$lib/components/blogCard.svelte";
-    import Pocketbase from "pocketbase";
+    import CardHolder from "$lib/components/card-holder.svelte";
 
     export let data;
-
-    const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
-    console.log(data?.blogs);
+    let { blog } = data;
 </script>
 
-<title>Blog</title>
-
-<div class="card-holder">
-    {#if data?.blogs.length > 0}
-        {#each data.blogs as blog}
-            <BlogCard
-                url="/blog/{blog.id}"
-                title={blog.title}
-                author={blog.author}
-                category={blog.category}
-                imgUrl={blog.displayImg}
-                likes={blog.likes}
-                views={blog.views}
-                createdAt={blog.created}
-            />
-        {/each}
-    {:else}
-        <p style="color:lightgrey">No Blog Entries to Display...</p>
-    {/if}
+<div class="container">
+    <CardHolder cardArray={blog} />
 </div>
-
-<style>
-    .card-holder {
-        margin: 32pt;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 36pt;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .card-holder {
-            grid-template-columns: 1fr;
-            grid-row-gap: 24pt;
-        }
-    }
-</style>

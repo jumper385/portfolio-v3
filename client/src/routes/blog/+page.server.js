@@ -1,29 +1,18 @@
-import Pocketbase from 'pocketbase';
-
+import {addImageUrls} from '$lib/helpers/getImageUrls';
+import Pocketbase from 'pocketbase'
 const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 
 export const load = async () => {
-  let {items: out} = await pb.collection('blog').getList(
-      1, 50, {filter: 'visible = true', sort: '-created'});
-  console.log(out?.map(e => e.id))
+  try {
+    let blog = structuredClone(
+        await pb.collection('blog').getFullList(1, {sort: '-created'}));
 
-  let blogs;
+    blog = addImageUrls(blog, 'display', {thumb: '0x1000'});
 
-  if (out.length > 0) {
-    blogs = out?.map(
-        e => ({
-          id: e.id,
-          author: e.author,
-          title: e.title,
-          displayImg: pb.getFileUrl(e, e.displayImg, {thumb: '0x1000'}),
-          likes: e.likes,
-          views: e.views,
-          category: e.category,
-          created: e.created
-        }))
-  } else {
-    blogs = []
+    return {
+      blog
+    }
+  } catch (error) {
+    console.log(error.message)
   }
-
-  return {blogs};
 }

@@ -1,26 +1,22 @@
-<div class="socials">
-    <a href="/contact">Get in Contact</a>
+<footer>
     <div class="social-icons">
         <i class="ri-linkedin-box-fill" />
         <i class="ri-instagram-line" />
         <i class="ri-behance-fill" />
         <i class="ri-github-line" />
     </div>
-</div>
+</footer>
 
 <style lang="scss">
-    .socials {
-        display: inline-flex;
-        gap: 24pt;
-        align-items: center;
+    footer {
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
         .social-icons {
             display: flex;
             gap: 24pt;
-        }
-
-        button {
-            padding: 8pt 16pt;
         }
     }
 </style>
