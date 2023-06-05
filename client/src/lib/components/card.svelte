@@ -2,15 +2,22 @@
     export let title = "Default Title";
     export let description = "Default Description";
     export let imageUrl = "https://via.placeholder.com/150";
+    export let cardUrl;
 </script>
 
-<div class="card">
+<article class="card">
     <img class="card-image" src={imageUrl} alt={title} />
     <div class="card-content">
-        <h2 class="card-title">{title}</h2>
+        <h2 class="card-title">
+            {#if cardUrl}
+                <a href={cardUrl}>{title}</a>
+            {:else}
+                {title}
+            {/if}
+        </h2>
         <p class="card-description">{description}</p>
     </div>
-</div>
+</article>
 
 <style lang="scss">
     .card {

@@ -9,6 +9,7 @@
             description={card?.description}
             title={card?.title}
             imageUrl={card?.display[0]}
+            cardUrl={card?.cardUrl}
         />
     {/each}
 </div>
