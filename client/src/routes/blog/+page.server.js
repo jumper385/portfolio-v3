@@ -8,7 +8,7 @@ export const load = async () => {
     let blog = structuredClone(
         await pb.collection('blog').getFullList(1, {sort: '-created'}));
 
-    blog = addImageUrls(blog, 'display', {thumb: '0x1000'});
+    blog = addImageUrls(blog, 'display', {thumb: '500x0'});
     blog = addCardUrl(blog, '/blog');
 
     console.log(blog);

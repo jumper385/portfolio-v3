@@ -22,7 +22,7 @@ export const load = async () => {
 
     console.log(blog)
 
-    blog = addImageUrls(blog, 'display', {thumb: '0x1000'})
+    blog = addImageUrls(blog, 'display', {thumb: '1000x0'})
     blog = addCardUrl(blog, '/blog');
 
     return {
