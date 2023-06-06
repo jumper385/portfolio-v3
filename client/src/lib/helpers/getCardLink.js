@@ -12,6 +12,5 @@ const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 export const addCardUrl = (collection, appendix) => {
   let out =
       collection.map(item => ({...item, cardUrl: `${appendix}/${item.id}`}))
-  console.log(out)
   return out;
 }

@@ -4,7 +4,9 @@ import Pocketbase from 'pocketbase';
 const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 
 export const load = async ({params}) => {
-  console.log(params.id)
+  let profile = await pb.collection('site_elements').getFirstListItem('', {})
+  profile = addImageUrls(
+      [structuredClone(profile)], 'landing_img', {thumb: '300x0'})[0];
 
   let out = await pb.collection('blog').getOne(params.id);
   let article =
@@ -12,5 +14,5 @@ export const load = async ({params}) => {
 
   pb.collection('blog').update(article.id, {views: article.views + 1})
 
-  return {article};
+  return {article, profile};
 }

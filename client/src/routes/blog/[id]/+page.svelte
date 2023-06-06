@@ -2,8 +2,7 @@
     import Profile from "$lib/components/profile.svelte";
 
     export let data;
-    let { article } = data;
-    console.log(article);
+    let { article, profile } = data;
 </script>
 
 <svelte:head>
@@ -21,7 +20,7 @@
         <Profile
             date={article.created}
             name="Henry Chen"
-            profile="https://placehold.co/600x400"
+            profile={profile.landing_img}
             role="Graduate Electronics Engineer @ VitalTrace"
         />
     </div>
@@ -50,12 +49,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 24pt;
-        title {
+        .title {
             display: flex;
-            gap: 24pt;
+            flex-direction: column;
+            gap: 12pt;
             * {
                 margin: 0;
             }
+            margin-bottom: 12pt;
         }
     }
 
