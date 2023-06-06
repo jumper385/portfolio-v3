@@ -1,4 +1,6 @@
 <script>
+    import Profile from "$lib/components/profile.svelte";
+
     export let data;
     let { article } = data;
     console.log(article);
@@ -10,22 +12,60 @@
     <meta name="author" content={article.author} />
 </svelte:head>
 
-<div class="title">
-    <h1 id="rzeyncta">{article.title}</h1>
-    <p id="jat1pgb9">{article.description}</p>
+<div class="blog-container">
+    <div class="title-block">
+        <div class="title">
+            <p>{article.category}</p>
+            <h1>{article.title}</h1>
+        </div>
+        <Profile
+            date={article.created}
+            name="Henry Chen"
+            profile="https://placehold.co/600x400"
+            role="Graduate Electronics Engineer @ VitalTrace"
+        />
+    </div>
 </div>
 
-<div class="details">
-    <p id="arfcuaty">Author: {article.author}</p>
-    <p id="xsjgaa9e">Category: {article.category}</p>
-    <p id="xsjgaa9e">Created: {article.created}</p>
+<div class="landing">
+    <img
+        class="blog-img"
+        id="bt1mmfzs"
+        src={article.display[0]}
+        alt={article.description}
+    />
 </div>
 
-<img id="bt1mmfzs" src={article.display[0]} alt={article.description} />
-
-{@html article.content}
+<div class="blog-container">
+    <div>{@html article.content}</div>
+</div>
 
 <div id="emotes">
     <p id="xygdve4o">Likes: {article.likes}</p>
     <p id="z1mifqmh">Views: {article.views}</p>
 </div>
+
+<style lang="scss">
+    .title-block {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24pt;
+        title {
+            display: flex;
+            gap: 24pt;
+            * {
+                margin: 0;
+            }
+        }
+    }
+
+    .blog {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+    .blog-img {
+        width: 100%;
+        aspect-ratio: 1280 / 500;
+        object-fit: cover;
+    }
+</style>
