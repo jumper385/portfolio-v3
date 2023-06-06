@@ -36,13 +36,13 @@
     />
 </div>
 
-<div class="blog-container">
+<div class="blog-container" style="margin-bottom:24pt;">
     <div>{@html article.content}</div>
 </div>
 
 <div id="emotes">
-    <p id="xygdve4o">Likes: {article.likes}</p>
-    <p id="z1mifqmh">Views: {article.views}</p>
+    <!-- <p id="xygdve4o">Likes: {article.likes}</p> -->
+    <p style="text-align:center">Views: {article.views}</p>
 </div>
 
 <style lang="scss">
@@ -59,10 +59,11 @@
         }
     }
 
-    .blog {
+    .blog-container {
         max-width: 640px;
         margin: 0 auto;
     }
+
     .blog-img {
         width: 100%;
         aspect-ratio: 1280 / 500;
