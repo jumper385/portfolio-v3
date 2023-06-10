@@ -7,7 +7,7 @@ export const load = async () => {
     let projects = structuredClone(
         await pb.collection('projects').getFullList(1, {sort: '-created'}));
 
-    projects = addImageUrls(projects, 'display', {thumb: '1000x0'});
+    projects = addImageUrls(projects, 'display', {thumb: '500x0'});
 
     return {
       projects

@@ -8,7 +8,7 @@
         <Card
             description={card?.description}
             title={card?.title}
-            imageUrl={card?.display[0]}
+            imageUrl={card?.display}
             cardUrl={card?.cardUrl}
         />
     {/each}

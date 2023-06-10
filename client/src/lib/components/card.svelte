@@ -1,12 +1,14 @@
 <script>
+    import ImgCarousel from "./img-carousel.svelte";
+
     export let title = "Default Title";
     export let description = "Default Description";
-    export let imageUrl = "https://via.placeholder.com/150";
+    export let imageUrl = [];
     export let cardUrl;
 </script>
 
 <article class="card">
-    <img class="card-image" src={imageUrl} alt={title} />
+    <ImgCarousel {imageUrl} {title} />
     <div class="card-content">
         <h2 class="card-title">
             {#if cardUrl}
@@ -25,13 +27,6 @@
         flex-direction: column;
         width: 100%;
         gap: 12pt;
-        img {
-            border-radius: 6pt;
-            aspect-ratio: 3 / 2;
-            object-fit: cover;
-            max-width: 100%;
-            max-height: 100%;
-        }
         .card-content {
             display: flex;
             flex-direction: column;
