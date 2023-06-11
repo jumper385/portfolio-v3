@@ -55,6 +55,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 12pt;
+            box-sizing: border-box;
         }
         .img-carousel-nav {
             height: 32pt;
