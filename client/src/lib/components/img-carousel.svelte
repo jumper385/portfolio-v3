@@ -58,7 +58,7 @@
         }
         .img-carousel-nav {
             height: 32pt;
-            aspect-ratio: 1 / 1;
+            width: 32pt;
             display: flex;
             align-items: center;
             justify-content: center;
