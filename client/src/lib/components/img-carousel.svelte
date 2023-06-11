@@ -52,7 +52,7 @@
     />
     {#if imageUrl.length > 1}
         <div class="carousel-info">
-            <p>{imgIdx + 1} / {imageUrl.length}</p>
+            <p class="info-tablet">{imgIdx + 1} / {imageUrl.length}</p>
         </div>
     {/if}
 </div>
@@ -99,15 +99,27 @@
         }
         .carousel-info {
             position: absolute;
-            bottom: 0;
+            bottom: 6pt;
             display: flex;
             justify-content: center;
-            // background: pink;
+            align-items: center;
             padding: 0;
             margin: 0;
             width: 100%;
             * {
                 margin: 0;
+            }
+            .info-tablet {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.6);
+                width: fit-content;
+                padding: 0 6pt;
+                height: 12pt;
+                font-size: 8pt;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6pt;
             }
         }
     }
