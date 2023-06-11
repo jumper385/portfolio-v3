@@ -1,6 +1,5 @@
 <script>
     import CardHolder from "$lib/components/card-holder.svelte";
-    import Card from "$lib/components/card.svelte";
     import Socials from "$lib/components/socials.svelte";
 
     export let data;
@@ -74,6 +73,12 @@
         * {
             margin: 0;
             padding: 0;
+        }
+    }
+
+    @media screen and (max-width: calc(640px)) {
+        .landing-row {
+            grid-template-columns: 1fr;
         }
     }
 </style>
