@@ -22,7 +22,7 @@
             date={article.created}
             name="Henry Chen"
             profile={profile.landing_img}
-            role="Graduate Electronics Engineer @ VitalTrace"
+            role={profile.position}
         />
     </div>
 </div>
@@ -36,11 +36,10 @@
 />
 
 <div class="blog-container" style="margin-bottom:24pt;">
-    <div>{@html article.content}</div>
+    <div class="blog-content">{@html article.content}</div>
 </div>
 
 <div id="emotes">
-    <!-- <p id="xygdve4o">Likes: {article.likes}</p> -->
     <p style="text-align:center">Views: {article.views}</p>
 </div>
 
@@ -63,6 +62,12 @@
     .blog-container {
         max-width: 640px;
         margin: 0 auto;
+
+        .blog-content {
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     .blog-img {
