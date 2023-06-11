@@ -13,6 +13,8 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        padding: 24pt;
+        box-sizing: border-box;
 
         .social-icons {
             display: flex;
