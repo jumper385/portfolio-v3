@@ -1,4 +1,5 @@
 <script>
+    import ImgCarousel from "$lib/components/img-carousel.svelte";
     import Profile from "$lib/components/profile.svelte";
 
     export let data;
@@ -26,14 +27,14 @@
     </div>
 </div>
 
-<div class="landing">
-    <img
-        class="blog-img"
-        id="bt1mmfzs"
-        src={article.display[0]}
-        alt={article.description}
-    />
-</div>
+<ImgCarousel
+    title={article.title}
+    imageUrl={article.display}
+    asHeight={7}
+    asWidth={16}
+    borderRadius="0"
+    ;
+/>
 
 <div class="blog-container" style="margin-bottom:24pt;">
     <div>{@html article.content}</div>
