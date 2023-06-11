@@ -6,6 +6,10 @@
     let { siteElements, projects, blog } = data;
 </script>
 
+<svelte:head>
+    <title>Digism Design</title>
+</svelte:head>
+
 <div class="landing-row">
     <div class="container landing-title">
         <div class="title">

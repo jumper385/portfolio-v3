@@ -5,6 +5,10 @@
     let { projects } = data;
 </script>
 
+<svelte:head>
+    <title>Digism Projects</title>
+</svelte:head>
+
 <div class="container">
     <CardHolder cardArray={projects} />
 </div>

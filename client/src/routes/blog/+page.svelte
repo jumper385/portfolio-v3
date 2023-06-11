@@ -5,6 +5,10 @@
     let { blog } = data;
 </script>
 
+<svelte:head>
+    <title>Digism Blog</title>
+</svelte:head>
+
 <div class="container">
     <CardHolder cardArray={blog} />
 </div>
