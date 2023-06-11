@@ -33,7 +33,6 @@
     asHeight={7}
     asWidth={16}
     borderRadius="0"
-    ;
 />
 
 <div class="blog-container" style="margin-bottom:24pt;">
@@ -70,5 +69,11 @@
         width: 100%;
         aspect-ratio: 1280 / 500;
         object-fit: cover;
+    }
+
+    @media screen and (max-width: calc(640px + 32pt)) {
+        .blog-container {
+            padding: 0 24pt;
+        }
     }
 </style>
