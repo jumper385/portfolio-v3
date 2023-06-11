@@ -10,7 +10,7 @@ export const load = async ({params}) => {
 
   let out = await pb.collection('blog').getOne(params.id);
   let article =
-      addImageUrls([structuredClone(out)], 'display', {thumb: '1500x0'})[0];
+      addImageUrls([structuredClone(out)], 'display', {thumb: '2000x0'})[0];
 
   pb.collection('blog').update(article.id, {views: article.views + 1})
 
