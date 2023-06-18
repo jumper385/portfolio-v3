@@ -11,6 +11,14 @@
 </svelte:head>
 
 <div class="landing-row">
+    <div class="container img-container">
+        <img
+            class="landing-img"
+            src={siteElements.landing_img}
+            alt="a landing"
+        />
+    </div>
+
     <div class="container landing-title">
         <div class="title">
             <h1>{siteElements.site_title}</h1>
@@ -24,14 +32,6 @@
         </div>
 
         <Socials />
-    </div>
-
-    <div class="container img-container">
-        <img
-            class="landing-img"
-            src={siteElements.landing_img}
-            alt="a landing"
-        />
     </div>
 </div>
 
@@ -55,7 +55,7 @@
 
     .landing-row {
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 2fr 1fr;
         width: 100%;
 
         .landing-img {
