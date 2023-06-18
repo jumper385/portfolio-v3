@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div class="landing-row">
-    <div class="container img-container">
+    <div class="">
         <img
             class="landing-img"
             src={siteElements.landing_img}
@@ -46,27 +46,39 @@
 </div>
 
 <style lang="scss">
-    .landing-title {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 32pt;
-    }
-
     .landing-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 100%;
+        height: 100%;
+        padding: 24pt;
+        box-sizing: border-box;
+        grid-gap: 24pt;
+
+        * {
+            padding: 0;
+        }
+
+        .landing-title {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 32pt;
+            background-color: #f6f6f6;
+            box-sizing: border-box;
+        }
 
         .landing-img {
             height: 100%;
-            width: 100%;
+            max-width: 100%;
             object-fit: cover;
         }
+        margin-bottom: 24pt;
     }
 
     .container {
         padding: 24pt;
+        height: 100%;
         box-sizing: border-box;
     }
 

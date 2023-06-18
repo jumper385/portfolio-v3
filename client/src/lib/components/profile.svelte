@@ -19,6 +19,7 @@
         font-size: 8pt;
         * {
             margin: 0;
+            line-height: 150%;
         }
         display: flex;
         gap: 6pt;

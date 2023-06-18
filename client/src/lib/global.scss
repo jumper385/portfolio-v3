@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Josefin Sans';
+}
+
+p {
+    font-family: 'Josefin Sans';
+    font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Caudex';
+    font-weight: normal;
+
+    * {
+        font-family: 'Caudex';
+        font-weight: normal;
+    }
+}
+
 .container {
     padding: 24pt;
     box-sizing: border-box;
