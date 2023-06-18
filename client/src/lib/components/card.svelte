@@ -31,8 +31,19 @@
             display: flex;
             flex-direction: column;
             gap: 6pt;
+            padding: 6pt;
             * {
                 margin: 0;
+                text-decoration: none;
+            }
+            .card-title {
+                * {
+                    font-size: 16pt;
+                    font-weight: 600;
+                }
+            }
+            .card-description {
+                line-height: 150%;
             }
         }
     }
