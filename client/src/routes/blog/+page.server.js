@@ -6,7 +6,7 @@ const pb = new Pocketbase(import.meta.env.VITE_DB_PATH);
 export const load = async () => {
   try {
     let blog = structuredClone(await pb.collection('blog').getFullList(
-        1, {sort: '-updated', filter: 'visible = true'}));
+        1, {sort: '-featured', filter: 'visible = true'}));
 
     blog = addImageUrls(blog, 'display', {thumb: '1000x0'});
     blog = addCardUrl(blog, '/blog');
