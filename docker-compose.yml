@@ -26,7 +26,7 @@ services:
     build:
       context: ./db
       args:
-        - PB_VERSION=0.14.1
+        - PB_VERSION=0.16.9
     ports:
       - 8543:8080
     volumes:
